@@ -124,3 +124,7 @@ docker logs --since 1m -f kokoro-tts
 Run `/speak test` in Pi. A new `POST /v1/audio/speech` line with `200 OK` confirms Pi reached the local container. If there is no new request, recheck `~/.pi/speak.json`, `/speak provider`, and whether Pi was reloaded. If the request succeeds but you hear nothing, check the computer's audio output and that an audio player such as `pw-play` is available.
 
 The formatting toggle lives in the [`spoken-toggle` extension](.pi/extensions/spoken-toggle.ts) and uses the [`spoken-coding` skill](.pi/skills/spoken-coding/SKILL.md). Pi's [extensions](https://pi.dev/docs/latest/extensions) and [skills](https://pi.dev/docs/latest/skills) guides explain how they load.
+
+## Speak the last answer from herdr
+
+To read a Claude Code or Pi answer aloud on demand from herdr through the same Kokoro server, see the [herdr-speak](https://github.com/pauldaywork/herdr-speak) project, cloned locally at `~/Projects/herdr-speak`.
